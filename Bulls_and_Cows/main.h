@@ -8,7 +8,11 @@ using std::endl;
 using std::string;
 
 void printIntro();
+
 void playGame();
+
 string requestFromPlayer();
+
 void printPlayerInput(string input);
+
 string getInput();

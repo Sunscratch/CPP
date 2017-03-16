@@ -12,9 +12,15 @@ int main() {
 
 void playGame()
 {
-	for (int i = 0; i < WORD_LENGTH; i++) {
-		printPlayerInput(requestFromPlayer());
-	}
+	bool play = true;
+	do
+	{
+		for (int i = 0; i < WORD_LENGTH; i++) {
+			printPlayerInput(requestFromPlayer());
+		}
+		play = continueGame();
+	} while (play);
+	
 }
 
 void printIntro() {
@@ -37,4 +43,15 @@ string getInput() {
 	string result = "";
 	getline(cin, result);
 	return result;
+}
+
+bool continueGame() {
+	cout << "Please press \"Y\" to continue play, \"N\" to abort game" << endl;
+	string answr = getInput();
+	while (answr[0] != 'Y' || answr[0] != 'y' || answr[0] != 'N' || answr[0] != 'n') {
+		cout << "Incorrect character. Please press \"Y\" to continue play, \"N\" to abort game" << endl;
+		answr = getInput();
+	}
+
+	return answr[0] == 'Y' || answr[0] == 'y';
 }
