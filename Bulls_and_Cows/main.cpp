@@ -13,13 +13,13 @@ int main() {
 void playGame()
 {
 	bool play = true;
-	do
-	{
+	
+	while (play) {
 		for (int i = 0; i < WORD_LENGTH; i++) {
 			printPlayerInput(requestFromPlayer());
 		}
 		play = continueGame();
-	} while (play);
+	} 
 
 	cout << "See you next time!" << endl;
 	
@@ -39,6 +39,7 @@ string requestFromPlayer() {
 
 void printPlayerInput(string input) {
 	cout << "Your input is \"" << input << "\"" << endl;
+	cout << endl;
 }
 
 string getInput() {
