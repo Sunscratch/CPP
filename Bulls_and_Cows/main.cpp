@@ -5,14 +5,14 @@ using namespace std;
 constexpr int WORD_LENGTH = 9;
 
 void printIntro();
-void requestFromPlayer();
+void requestFromPlayerAndPrintBack();
 string getInput();
 
 
 int main() {
 	
 	printIntro();
-	requestFromPlayer();
+	requestFromPlayerAndPrintBack();
 	
 	return 0;
 
@@ -23,7 +23,7 @@ void printIntro() {
 	cout << "Can you guess the " << WORD_LENGTH << " letter isogram?" << endl;
 }
 
-void requestFromPlayer() {
+void requestFromPlayerAndPrintBack() {
 	string playerInput = "";
 	cout << "Please enter your character :" << endl;
 	playerInput = getInput();
