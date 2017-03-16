@@ -16,3 +16,5 @@ string requestFromPlayer();
 void printPlayerInput(string input);
 
 string getInput();
+
+bool continueGame();
