@@ -20,6 +20,8 @@ void playGame()
 		}
 		play = continueGame();
 	} while (play);
+
+	cout << "See you next time!" << endl;
 	
 }
 
@@ -48,10 +50,11 @@ string getInput() {
 bool continueGame() {
 	cout << "Please press \"Y\" to continue play, \"N\" to abort game" << endl;
 	string answr = getInput();
-	while (answr[0] != 'Y' || answr[0] != 'y' || answr[0] != 'N' || answr[0] != 'n') {
+	while (!(answr[0] == 'Y' || answr[0] == 'y' || answr[0] == 'N' || answr[0] == 'n')) {
 		cout << "Incorrect character. Please press \"Y\" to continue play, \"N\" to abort game" << endl;
 		answr = getInput();
 	}
+	
 
 	return answr[0] == 'Y' || answr[0] == 'y';
 }
