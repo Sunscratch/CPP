@@ -1,22 +1,20 @@
-#include <stdio.h>
-#include <iostream>
-#include <string>
-using namespace std;
-constexpr int WORD_LENGTH = 9;
+#include "main.h"
 
-void printIntro();
-string requestFromPlayer();
-void printPlayerInput(string input);
-string getInput();
-
+constexpr int WORD_LENGTH = 4;
 
 int main() {
 	
 	printIntro();
-	printPlayerInput(requestFromPlayer());
 	
+	playGame();
 	return 0;
+}
 
+void playGame()
+{
+	for (int i = 0; i < WORD_LENGTH; i++) {
+		printPlayerInput(requestFromPlayer());
+	}
 }
 
 void printIntro() {
