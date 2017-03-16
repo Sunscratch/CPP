@@ -12,15 +12,12 @@ int main() {
 
 void playGame()
 {
-	bool play = true;
-	
-	while (play) {
+	do {
 		for (int i = 0; i < WORD_LENGTH; i++) {
 			printPlayerInput(requestFromPlayer());
 		}
-		play = continueGame();
-	} 
-
+	} while (continueGame());
+	
 	cout << "See you next time!" << endl;
 	
 }
